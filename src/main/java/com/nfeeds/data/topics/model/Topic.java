@@ -13,12 +13,15 @@ import lombok.Setter;
 @Entity
 public class Topic {
 
+    /** Chosen identifier for the topic. */
     @Id
     private String id;
 
+    /** Identifier of the user that created the topic. */
     @Column(nullable = false)
     private String owner;
 
+    /** Tells if the topic is open or closed. */
     @Column(nullable = false)
     private String status;
 }
